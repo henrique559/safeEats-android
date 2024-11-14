@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#C62828</color>
+    <color name="colorPrimaryDark">#B71C1C</color>
+    <color name="colorAccent">#FF5252</color>
+
+    <!-- Cores principais -->
+    <color name="primaryColor">#FF6347</color> <!-- Cor principal (exemplo: tomate) -->
+    <color name="primaryTextColor">#212121</color> <!-- Cor do texto principal -->
+    <color name="secondaryTextColor">#757575</color> <!-- Cor do texto secundário -->
+    <color name="backgroundColor">#F5F5F5</color> <!-- Cor de fundo da tela -->
+
+    <!-- Cores do botão -->
+    <color name="buttonColor">#4CAF50</color> <!-- Cor do botão -->
+    <color name="buttonTextColor">#FFFFFF</color> <!-- Cor do texto do botão -->
+
+    <!-- Cores dos campos de entrada -->
+    <color name="editTextBackgroundColor">#FFFFFF</color> <!-- Cor de fundo dos campos de entrada -->
+    <color name="editTextHintColor">#B0B0B0</color> <!-- Cor do texto de dica (hint) -->
+</resources>
