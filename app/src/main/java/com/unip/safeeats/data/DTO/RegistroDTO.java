@@ -1,25 +1,32 @@
 package com.unip.safeeats.data.DTO;
 
-public class RegistroDTO {
+import java.io.Serializable;
+
+public class RegistroDTO implements Serializable {
 
     private String nome;
     private String email;
     private String senha;
     private String cpf;
     private String telefone;
-    private EnderecoDTO endereco;
+    private String rua;
+    private String numero;
+    private String complemento;
+    private String cep;
 
-    public RegistroDTO(String nome, String email, String senha, String cpf, String telefone, EnderecoDTO endereco) {
+    public RegistroDTO(String nome, String email, String senha, String cpf, String telefone, String rua, String numero, String complemento, String cep) {
         this.nome = nome;
         this.email = email;
         this.senha = senha;
         this.cpf = cpf;
         this.telefone = telefone;
-        this.endereco = endereco;
+        this.rua = rua;
+        this.numero = numero;
+        this.complemento = complemento;
+        this.cep = cep;
     }
 
-    public RegistroDTO() {
-    }
+    public RegistroDTO() {}
 
     public String getNome() {
         return nome;
@@ -61,23 +68,35 @@ public class RegistroDTO {
         this.telefone = telefone;
     }
 
-    public EnderecoDTO getEnderecos() {
-        return endereco;
+    public String getRua() {
+        return rua;
     }
 
-    public void setEnderecos(EnderecoDTO endereco) {
-        this.endereco = endereco;
+    public void setRua(String rua) {
+        this.rua = rua;
     }
 
-    @Override
-    public String toString() {
-        return "RegistroDTO{" +
-                "nome='" + nome + '\'' +
-                ", email='" + email + '\'' +
-                ", senha='" + senha + '\'' +
-                ", cpf='" + cpf + '\'' +
-                ", telefone='" + telefone + '\'' +
-                ", endereco=" + endereco +
-                '}';
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
+    public String getComplemento() {
+        return complemento;
+    }
+
+    public void setComplemento(String complemento) {
+        this.complemento = complemento;
+    }
+
+    public String getCep() {
+        return cep;
+    }
+
+    public void setCep(String cep) {
+        this.cep = cep;
     }
 }

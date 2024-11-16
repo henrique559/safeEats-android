@@ -1,6 +1,8 @@
 package com.unip.safeeats.data.DTO;
 
-public class LoginDTO {
+import java.io.Serializable;
+
+public class LoginDTO implements Serializable {
     private String email;
     private String senha;
 

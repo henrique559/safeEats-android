@@ -1,15 +1,14 @@
 package com.unip.safeeats.data.model;
 
-public class LoginResponse {
+import java.io.Serializable;
+
+public class LoginResponse implements Serializable {
     private String token;
-    private String message;
+    private Cliente cliente;
 
-    public LoginResponse(String token, String message) {
+    public LoginResponse(String token, Cliente cliente) {
         this.token = token;
-        this.message = message;
-    }
-
-    public LoginResponse() {
+        this.cliente = cliente;
     }
 
     public String getToken() {
@@ -20,11 +19,11 @@ public class LoginResponse {
         this.token = token;
     }
 
-    public String getMessage() {
-        return message;
+    public Cliente getCliente() {
+        return cliente;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 }

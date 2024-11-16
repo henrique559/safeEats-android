@@ -15,7 +15,6 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.unip.safeeats.R;
-import com.unip.safeeats.data.DTO.EnderecoDTO;
 import com.unip.safeeats.data.DTO.RegistroDTO;
 import com.unip.safeeats.data.model.Cliente;
 import com.unip.safeeats.data.model.Endereco;
@@ -24,7 +23,6 @@ import com.unip.safeeats.data.remote.ApiService;
 import com.unip.safeeats.data.remote.RetrofitClient;
 import com.unip.safeeats.ui.main.MainActivity;
 
-import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -70,7 +68,7 @@ public class telaCadastro3 extends AppCompatActivity {
                     Toast.makeText(telaCadastro3.this, "Por favor insira os seus dados", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    Cliente cliente = new Cliente(cpf, telefone, usuario, endereco);
+                    Cliente cliente = new Cliente(usuario, endereco, telefone,cpf);
                     Date date;
 
                     try{
@@ -81,20 +79,18 @@ public class telaCadastro3 extends AppCompatActivity {
                     }
                     assert usuario != null;
                     assert endereco != null;
+                    // Declarando um DTO para enviar dados
                     RegistroDTO clienteDados = new RegistroDTO(
                             usuario.getNome(),
                             usuario.getEmail(),
                             usuario.getSenha(),
                             cliente.getCpf(),
                             cliente.getTelefone(),
-                            new EnderecoDTO(
-                                    endereco.getRua(),
-                                    endereco.getNumero(),
-                                    endereco.getComplemento(),
-                                    endereco.getCep()
-                            )
-                    );
-
+                            endereco.getRua(),
+                            endereco.getNumero(),
+                            endereco.getComplemento(),
+                            endereco.getCep()
+                );
                     Log.d("API_DEBUG", clienteDados.toString());
 
                     registrarCliente(clienteDados);

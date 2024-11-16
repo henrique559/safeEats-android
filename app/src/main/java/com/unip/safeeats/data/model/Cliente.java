@@ -8,20 +8,19 @@ import java.util.List;
 
 public class Cliente implements Serializable {
     private Usuario usuario;
-    private List<Endereco> enderecos = new ArrayList<>();
+    private Endereco endereco;
     private String cpf;
     private String telefone;
-
-    public Cliente(String cpf, String telefone, Usuario usuario, Endereco endereco) {
-        this.usuario = usuario;
-        this.cpf = cpf;
-        this.telefone = telefone;
-        enderecos.add(endereco);
-    }
 
     public Cliente() {
     }
 
+    public Cliente(Usuario usuario, Endereco enderecos, String cpf, String telefone) {
+        this.usuario = usuario;
+        this.endereco = enderecos;
+        this.cpf = cpf;
+        this.telefone = telefone;
+    }
 
     public Usuario getUsuario() {
         return usuario;
@@ -31,9 +30,6 @@ public class Cliente implements Serializable {
         this.usuario = usuario;
     }
 
-    public List<Endereco> getEnderecos() {
-        return enderecos;
-    }
 
 
     public String getCpf() {
@@ -42,6 +38,14 @@ public class Cliente implements Serializable {
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
     }
 
     public String getTelefone() {
@@ -56,7 +60,7 @@ public class Cliente implements Serializable {
     public String toString() {
         return "Cliente{" +
                 ", usuario=" + usuario +
-                ", enderecos=" + enderecos.get(0) +
+                ", enderecos=" + endereco +
                 ", cpf='" + cpf + '\'' +
                 ", telefone='" + telefone + '\'' +
                 '}';

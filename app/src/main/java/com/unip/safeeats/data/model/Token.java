@@ -1,6 +1,8 @@
 package com.unip.safeeats.data.model;
 
-public class Token {
+import java.io.Serializable;
+
+public class Token implements Serializable {
     private String token;
 
     public Token(String token) {

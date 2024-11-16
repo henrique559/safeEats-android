@@ -13,6 +13,7 @@ import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 
 /*
 Classe criada para declaração de interfaces que servirão como End-point para a API realizar a conexão e fazer operações CRUD
@@ -34,6 +35,10 @@ public interface ApiService {
 
     @POST("Auth/registrar")
     Call<Cliente> registrar(@Body RegistroDTO registro);
+
+    @GET("Cliente/email/{email}")
+    Call<Cliente> getClientePorEmail(@Path("email") String email);
+
 
 
 
