@@ -22,6 +22,7 @@ import com.unip.safeeats.data.model.Usuario;
 import com.unip.safeeats.data.remote.ApiService;
 import com.unip.safeeats.data.remote.RetrofitClient;
 import com.unip.safeeats.ui.main.MainActivity;
+import com.unip.safeeats.util.Regex.InputValidator;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -64,8 +65,18 @@ public class telaCadastro3 extends AppCompatActivity {
                 String cpf = inputCPF.getText().toString().trim();
                 String dataNascimento = inputDataNascimento.getText().toString().trim();
 
+                if(!InputValidator.isInputValid(telefone, InputValidator.telefonePattern())){
+                    Toast.makeText(telaCadastro3.this, "Por favor, insira um telefone valido.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if(!InputValidator.isInputValid(cpf, InputValidator.cpfPattern())){
+                    Toast.makeText(telaCadastro3.this, "Por favor, insira um CPF valido.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 if(telefone.isEmpty() || cpf.isEmpty() || dataNascimento.isEmpty() ){
-                    Toast.makeText(telaCadastro3.this, "Por favor insira os seus dados", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(telaCadastro3.this, "Por favor, insira seus dados", Toast.LENGTH_SHORT).show();
                 }
                 else{
                     Cliente cliente = new Cliente(usuario, endereco, telefone,cpf);
@@ -92,9 +103,9 @@ public class telaCadastro3 extends AppCompatActivity {
                             endereco.getCep()
                 );
                     Log.d("API_DEBUG", clienteDados.toString());
+                    Toast.makeText(telaCadastro3.this, clienteDados.toString(), Toast.LENGTH_SHORT).show();
 
                     registrarCliente(clienteDados);
-                    // Cria os clientes e volta para o menu
 
                 }
 

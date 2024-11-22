@@ -1,0 +1,36 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:background="@drawable/background_card">
+
+    <!-- Nome do Produto -->
+    <TextView
+        android:id="@+id/tvNomeProduto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Produto X"
+        android:textSize="16sp"
+        android:textColor="#333" />
+
+    <!-- Quantidade -->
+    <TextView
+        android:id="@+id/tvQuantidadeProduto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Qtd: 1"
+        android:textSize="14sp"
+        android:textColor="#666" />
+
+    <!-- Preço -->
+    <TextView
+        android:id="@+id/tvPrecoProduto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R$ 49,99"
+        android:textSize="16sp"
+        android:textColor="#333" />
+</LinearLayout>

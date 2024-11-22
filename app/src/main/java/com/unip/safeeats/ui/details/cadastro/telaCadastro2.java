@@ -17,6 +17,7 @@ import com.unip.safeeats.R;
 import com.unip.safeeats.data.model.Endereco;
 import com.unip.safeeats.data.model.Usuario;
 import com.unip.safeeats.data.remote.ApiService;
+import com.unip.safeeats.util.Regex.InputValidator;
 
 public class telaCadastro2 extends AppCompatActivity {
     EditText inputEndereco, inputNumero, inputComplemento, inputCEP;
@@ -48,6 +49,28 @@ public class telaCadastro2 extends AppCompatActivity {
                 String numero = inputNumero.getText().toString().trim();
                 String complemento = inputComplemento.getText().toString().trim();
                 String cep = inputCEP.getText().toString().trim();
+
+
+                if(enderecoStr.length() < 5){
+                    Toast.makeText(telaCadastro2.this, "Por favor, insira um endereço valido.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+
+                if(complemento.length() < 5){
+                    Toast.makeText(telaCadastro2.this, "Por favor, insira um complemento valido.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if(!InputValidator.isInputValid(numero, InputValidator.numPattern())){
+                    Toast.makeText(telaCadastro2.this, "Por favor, insira um numero valido.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if(!InputValidator.isInputValid(cep, InputValidator.cepPattern())){
+                    Toast.makeText(telaCadastro2.this, "Por favor, insira um cep valido.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
                 if(enderecoStr.isEmpty() || numero.isEmpty() || complemento.isEmpty() || cep.isEmpty()){
                     Toast.makeText(telaCadastro2.this, "Por favor, insira seus dados.", Toast.LENGTH_SHORT).show();

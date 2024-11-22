@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:elevation="2dp"
+    tools:context=".CarrinhoFragment">
+
+    <!-- Imagem do Produto -->
+
+    <!-- Nome do Produto -->
+
+    <!-- Preço Unitário do Produto -->
+
+    <ImageView
+        android:id="@+id/imagemProduto"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="24dp"
+        android:src="@drawable/dall_e_2024_11_16_12_25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nomeProduto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome do Produto"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.181"
+        app:layout_constraintStart_toEndOf="@id/imagemProduto"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/precoUnitario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R$ 0,00"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.278"
+        app:layout_constraintStart_toEndOf="@id/imagemProduto"
+        app:layout_constraintTop_toBottomOf="@id/nomeProduto" />
+
+    <TextView
+        android:id="@+id/subtotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subtotal: R$ 0,00"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.216"
+        app:layout_constraintStart_toEndOf="@id/imagemProduto"
+        app:layout_constraintTop_toBottomOf="@id/quantidade" />
+
+    <TextView
+        android:id="@+id/quantidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quantidade: 1"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.234"
+        app:layout_constraintStart_toEndOf="@id/imagemProduto"
+        app:layout_constraintTop_toBottomOf="@id/precoUnitario" />
+
+    <!-- Quantidade do Produto -->
+
+    <!-- Subtotal do Produto -->
+
+    <!-- Botão para adicionar quantidade -->
+    <Button
+        android:id="@+id/botaoAdicionar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        app:layout_constraintTop_toBottomOf="@id/subtotal"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/buttonColor"
+        android:textColor="@android:color/white"
+        android:padding="8dp" />
+
+    <!-- Botão para remover quantidade -->
+    <Button
+        android:id="@+id/botaoRemover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        app:layout_constraintTop_toBottomOf="@id/subtotal"
+        app:layout_constraintStart_toEndOf="@id/botaoAdicionar"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:textColor="@android:color/white"
+        android:padding="8dp" />
+
+    <!-- Botão para remover item do carrinho -->
+    <Button
+        android:id="@+id/botaoRemoverItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/editTextHintColor"
+        android:padding="8dp"
+        android:text="Remover"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toEndOf="@id/botaoRemover"
+        app:layout_constraintTop_toBottomOf="@id/subtotal" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

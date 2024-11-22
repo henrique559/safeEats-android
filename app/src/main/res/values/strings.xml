@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">safeEats</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="requisitos_senha">
+        <item>Pelo menos 8 caracteres</item>
+        <item>Pelo menos uma letra maiúscula</item>
+        <item>Pelo menos uma letra minúscula</item>
+        <item>Pelo menos um número</item>
+        <item>Pelo menos um caractere especial</item>
+    </string-array>
+    <string-array name="enderecos">
+        <item>Rua Exemplo, 123, São Paulo</item>
+    </string-array>
 </resources>

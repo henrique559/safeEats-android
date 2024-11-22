@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_margin="8dp"
+    android:background="@drawable/background_card"
+    android:elevation="8dp"
+    android:clipToOutline="true">
+
+    <!-- Imagem do Produto -->
+    <ImageView
+        android:id="@+id/produtoImagem"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dall_e_2024_11_16_12_25"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/edittext_background"
+        android:clipToOutline="true" />
+
+    <!-- Nome do Produto -->
+    <TextView
+        android:id="@+id/produtoNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nome do Produto"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_marginBottom="6dp" />
+
+    <!-- Avaliação e Estoque -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <!-- Avaliação com Estrelas -->
+
+        <!-- Quantidade em Estoque -->
+        <TextView
+            android:id="@+id/produtoEstoque"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Em estoque: 25 unidades"
+            android:textSize="12sp"
+            android:textColor="@color/secondaryTextColor" />
+    </LinearLayout>
+
+    <!-- Descrição -->
+    <TextView
+        android:id="@+id/produtoDescricao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Descrição detalhada do produto, exibindo os principais atributos e vantagens."
+        android:textSize="12sp"
+        android:textColor="@color/secondaryTextColor"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Promoções e Tags -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <!-- Promoção -->
+
+        <!-- Tag de Frete Grátis -->
+        <TextView
+            android:id="@+id/produtoFreteGratis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Frete Grátis"
+            android:textSize="12sp"
+            android:textColor="@color/green"
+            android:textStyle="bold"
+            android:background="@drawable/background_card"
+            android:padding="4dp" />
+    </LinearLayout>
+
+    <!-- Linha Inferior: Preço e Botão de Ação -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dp">
+
+        <!-- Preço Original -->
+
+        <!-- Preço Promocional -->
+        <TextView
+            android:id="@+id/produtoPreco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R$ 99,99"
+            android:textSize="12sp"
+            android:textColor="@color/buttonColor"
+            android:textStyle="bold"
+            android:layout_weight="1" />
+
+        <!-- Botão de Comprar -->
+        <Button
+            android:id="@+id/comprarButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comprar"
+            android:backgroundTint="@color/buttonColor"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:elevation="2dp" />
+    </LinearLayout>
+</LinearLayout>
+
+

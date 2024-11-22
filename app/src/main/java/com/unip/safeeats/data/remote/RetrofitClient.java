@@ -6,9 +6,9 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /*
-* Classe responsável por criar conexão com API de banco de Dados
-*
-* */
+ * Classe responsável por criar conexão com API de banco de Dados
+ *
+ * */
 public class RetrofitClient {
     private static Retrofit retrofit;
     private static final String URL = Constants.URL;

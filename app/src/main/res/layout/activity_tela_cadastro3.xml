@@ -8,78 +8,93 @@
     android:background="@color/backgroundColor"
     tools:context=".ui.details.cadastro.telaCadastro3">
 
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/buttonColor"
+        android:elevation="10dp"
+        android:title="SafeEats"
+        android:titleTextColor="@color/buttonTextColor"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <!-- Título -->
     <TextView
         android:id="@+id/cadastroTextTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="184dp"
         android:text="Finalize seu cadastro"
-        android:textSize="20sp"
         android:textColor="@color/primaryTextColor"
+        android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="100dp" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Campo Nome Completo -->
+    <!-- Campo Telefone -->
     <EditText
         android:id="@+id/cadastroInputTelefone"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginHorizontal="16dp"
         android:hint="Telefone"
-        android:inputType="text"
+        android:inputType="phone"
         android:padding="12dp"
         android:background="@drawable/edittext_background"
+        android:contentDescription="Insira seu telefone"
         app:layout_constraintTop_toBottomOf="@id/cadastroTextTitulo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="50dp" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Campo Email -->
+    <!-- Campo CPF -->
     <EditText
         android:id="@+id/cadastroInputCPF"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="16dp"
         android:hint="CPF"
-        android:inputType="text"
+        android:inputType="number"
         android:padding="12dp"
         android:background="@drawable/edittext_background"
+        android:contentDescription="Insira seu CPF"
         app:layout_constraintTop_toBottomOf="@id/cadastroInputTelefone"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Campo Senha -->
-
+    <!-- Campo Data de Nascimento -->
     <EditText
         android:id="@+id/cadastroInputData"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
-        android:background="@drawable/edittext_background"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="16dp"
         android:hint="Data de Nascimento"
         android:inputType="date"
         android:padding="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:background="@drawable/edittext_background"
+        android:contentDescription="Insira sua data de nascimento"
+        app:layout_constraintTop_toBottomOf="@id/cadastroInputCPF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cadastroInputTelefone" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Botão Finalizar -->
     <Button
         android:id="@+id/LoginButtonEnviar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="548dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="64dp"
         android:backgroundTint="@color/buttonColor"
-        android:padding="12dp"
         android:text="Finalizar"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:contentDescription="Botão para finalizar o cadastro"
+        app:layout_constraintTop_toBottomOf="@id/cadastroInputData"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

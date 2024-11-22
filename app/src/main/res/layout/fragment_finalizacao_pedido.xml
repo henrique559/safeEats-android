@@ -1,0 +1,108 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/background_card"
+    android:padding="16dp">
+
+    <!-- Título da Página -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Finalização do Pedido"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#333"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Resumo dos Produtos -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resumo do Pedido"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#444"
+        android:layout_marginBottom="8dp" />
+
+    <!-- RecyclerView para listar os produtos -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCarrinho"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Restante do layout (endereços, pagamentos, botão) -->
+    <!-- Seção de Endereço -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Selecione o Endereço"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#444"
+        android:layout_marginBottom="8dp" />
+
+    <Spinner
+        android:id="@+id/spinnerEndereco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_card"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Seção de Pagamento -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Forma de Pagamento"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#444"
+        android:layout_marginBottom="8dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupPagamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+
+        <RadioButton
+            android:id="@+id/rbCartao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cartão de Crédito"
+            android:textSize="16sp"
+            android:textColor="#444" />
+
+        <RadioButton
+            android:id="@+id/rbBoleto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Boleto Bancário"
+            android:textSize="16sp"
+            android:textColor="#444" />
+
+        <RadioButton
+            android:id="@+id/rbPix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pix"
+            android:textSize="16sp"
+            android:textColor="#444" />
+    </RadioGroup>
+
+    <!-- Botão para Finalizar Pedido -->
+    <Button
+        android:id="@+id/btnFinalizarPedido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Finalizar Pedido"
+        android:backgroundTint="@color/buttonColor"
+        android:textColor="#FFFFFF"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp" />
+</LinearLayout>

@@ -19,4 +19,10 @@
     <!-- Cores dos campos de entrada -->
     <color name="editTextBackgroundColor">#FFFFFF</color> <!-- Cor de fundo dos campos de entrada -->
     <color name="editTextHintColor">#B0B0B0</color> <!-- Cor do texto de dica (hint) -->
+    <color name="primary">#6200EE</color>
+    <color name="red">#D32F2F</color>
+    <color name="green">#388E3C</color>
+
+
+
 </resources>
